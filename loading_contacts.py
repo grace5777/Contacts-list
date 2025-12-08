@@ -2,11 +2,11 @@ import random
 
 # giving information that will be used for all the random 200 contacts
 def load_initial_contacts(contact_book):
-    first_names = ["Grace ", "Lucy", "Eden", "Charlie", "Sam", "Shannon", "Henry", "Tilly", "wendy", "olivia", "Lewis"]
+    first_names = ["Grace ", "Lucy", "Eden", "Charlie", "Sam", "Shannon", "Henry", "Tilly", "wendy", "olivia", "Lewis", "Maddie", "Rachel", "Susan", "Duncan", "Ana", "Michelle", "Jennifer", "Miranda"]
 
-    last_names = ["Smith", "Williams", "Adams", "Baker", "Johnson", "Kent", "Lawrence", "Addyman", "Stevens"]
+    last_names = ["Smith", "Williams", "Adams", "Baker", "Johnson", "Kent", "Lawrence", "Addyman", "Stevens", "Rivers", "Cassidy", "Jennings", "Pierce", "Stone", "Sinclair", "Parker", "Knight", "Francis", "Wilson", "Anderson"]
     
-    street_names = ["Desborough Avenue", "High street", "Pretty girl avenue", "Amersham Road", "Parkside Road", "Market Street", "Feathers Way", "Ivy Street"]
+    street_names = ["Desborough Avenue", "High Street", "Pretty girl Avenue", "Amersham Road", "Parkside Road", "Market Street", "Feathers Way", "Ivy Street"]
 
     # making sets will prevent duplication
     used_names = set()
@@ -41,7 +41,7 @@ def load_initial_contacts(contact_book):
             continue
 
         # adding the contact to the contact book
-        contact_book.add_contact(name, phone, address)
-        used_names.add(name)
-        used_phones.add(phone)
-        used_addresses.add(address)
+        contact_book.add_contact(name, phone, address, silent = True)
+        used_names.add(name, silent = True)
+        used_phones.add(phone, silent = True)
+        used_addresses.add(address, silent = True)

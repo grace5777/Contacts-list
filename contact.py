@@ -19,7 +19,7 @@ class ContactBook:
         self.contacts = {}
 
     # adding in a new contact (1)
-    def add_contact(self, name, phone, address):
+    def add_contact(self, name, phone, address, silent = False):
         # preventing duplicate contacts
         if name in self.contacts:
             print("A contact with this name already exists.")
@@ -28,7 +28,7 @@ class ContactBook:
         print("Contact added successfully.")
 
     # removing a specific contact (2)
-    def delete_contact(self, name):
+    def delete_contact(self, name, silent = False):
         if name in self.contacts:
             del self.contacts[name]
             print("Contact deleted.")
@@ -36,7 +36,7 @@ class ContactBook:
             print("Contact not found.")
 
     # editing a specific contact (3)
-    def edit_contact(self, name, new_phone=None, new_address=None):
+    def edit_contact(self, name, new_phone=None, new_address=None, silent = False):
         if name not in self.contacts:
             print("Contact not found.")
             return
@@ -48,14 +48,14 @@ class ContactBook:
         print("Contact updated.")
 
     # searching for a specific contact (4)
-    def search(self, name):
+    def search(self, name, silent = False):
         if name in self.contacts:
             print(self.contacts[name])
         else:
             print("Contact not found.")
 
     # showing all the contacts (5)
-    def show_all(self):
+    def show_all(self, silent = False):
         if not self.contacts:
             print("No contacts available.")
             return
