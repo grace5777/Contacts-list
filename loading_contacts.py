@@ -21,7 +21,27 @@ def load_initial_contacts(contact_book):
         if name in used_names:
             continue 
 
+        # creating a uk phone number
+        # the 07 is because all uk numbers start with 07
+        # random.randit(100, 999) will create 3 random digits
+        # random.randit(100, 999999) will create 6 random digits
+        # this allows the phone number to be spaced like an actual phone number
+        phone = f"07{random.randint(100, 999)} {random.randint(100000, 999999)}"
+        # making sure theres no duplication
+        if phone in used_phones:
+            continue
 
+        # creating an address
+        # getting a random house number 
+        house_number = random.randint(1, 200)
+        # combines the number and one of the street names
+        address = f"{house_number} {random.choice(street_names)}"
+        # making sure theres no duplication
+        if address in used_addresses:
+            continue
 
         # adding the contact to the contact book
-        contact_book.add_contact(name)
+        contact_book.add_contact(name, phone, address)
+        used_names.add(name)
+        used_phones.add(phone)
+        used_addresses.add(address)
