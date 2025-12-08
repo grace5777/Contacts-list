@@ -62,16 +62,8 @@ class ContactBook:
         for contact in self.contacts.values():
             print(contact)
 
-
-# CHANGE THIS BIT
-# loading the original 200 contacts
-def load_initial_contacts(contact_book):
-    for i in range(1, 201):
-        name = f"Person{i}"
-        phone = f"555-000{i:03d}"
-        address = f"{i} Example Street"
-        contact_book.add_contact(name, phone, address)
-
+# loading the contact list 
+from loading_contacts import load_initial_contacts 
 
 # the main menu
 def main():
