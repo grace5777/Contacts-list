@@ -42,6 +42,6 @@ def load_initial_contacts(contact_book):
 
         # adding the contact to the contact book
         contact_book.add_contact(name, phone, address, silent = True)
-        used_names.add(name)
-        used_phones.add(phone)
-        used_addresses.add(address)
+        used_names.add(name, silent = True)
+        used_phones.add(phone, silent = True)
+        used_addresses.add(address, silent = True)
