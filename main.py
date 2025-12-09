@@ -1,10 +1,10 @@
 # importing from the other files
 from loading_contacts import load_initial_contacts 
-from contact import ContactBook
+from contact import contact_book
 
 # the main menu
 def main():
-    book = ContactBook()
+    book = contact_book()
     load_initial_contacts(book)
 
     # display menu loop

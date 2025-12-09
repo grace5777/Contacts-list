@@ -10,7 +10,7 @@ class Contact:
         return f"Name: {self.name}, Phone: {self.phone}, Address: {self.address}"
 
 # the class for the contact list stored using a hash table
-class ContactBook:
+class contact_book:
 
     def __init__(self):
         # using a python dictonary as the hash table
@@ -36,7 +36,7 @@ class ContactBook:
             print("Contact not found.")
 
     # editing a specific contact (3)
-    def edit_contact(self, name, new_phone=None, new_address=None, silent = False):
+    def edit_contact(self, name, new_phone = None, new_address = None, silent = False):
         if name not in self.contacts:
             print("Contact not found.")
             return
