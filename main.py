@@ -10,14 +10,14 @@ def main():
     # display menu loop
     while True:
         print("\n--- Contact Book Menu ---")
-        print("1. Add Contact")
-        print("2. Delete Contact")
-        print("3. Edit Contact")
-        print("4. Search Contact")
-        print("5. Show All Contacts")
+        print("1. Add a contact")
+        print("2. Delete a contact")
+        print("3. Edit a contact")
+        print("4. Search for a contact")
+        print("5. Show all contacts")
         print("6. Exit")
 
-        choice = input("Choose an option: ")
+        choice = input("Please choose an option: ")
 
         if choice == "1":
             name = input("Enter name: ")
